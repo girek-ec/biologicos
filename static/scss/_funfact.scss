@@ -1,0 +1,221 @@
+/***
+
+====================================================================
+    Fun Fact Section
+====================================================================
+
+***/
+.fun-fact-section {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: var(--theme-color3);
+    background-image: url(../images/icons/pattern-10.jpg);
+    .fact-counter {
+        padding: 100px 0 60px;
+    }
+    .count-box {
+        position: relative;
+        font-size: 70px;
+        color: #ffc737;
+        line-height: 1em;
+        font-family: var(--third-font);
+        .count-text {
+            font-size: 70px;
+            color: #ffc737;
+            line-height: 1em;
+            margin-bottom: 10px;
+        }
+    }
+    .counter-title {
+        display: block;
+        font-size: 18px;
+        line-height: 26px;
+        color: #8fa89f;
+        margin-top: 10px;
+    }
+    .features {
+        position: relative;
+        background: #ffffff;
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 50px;
+            background: var(--theme-color3);
+            content: "";
+            width: 100%;
+        }
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            height: 70px;
+            width: 100%;
+            content: "";
+            background-image: url(../images/icons/pattern-3.png);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+        }
+    }
+}
+.counter-column {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.features-outer {
+    position: relative;
+    background: #ffffff;
+    padding: 40px 0 10px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, .10);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .10);
+    z-index: 1;
+}
+.feature-block-two {
+    position: relative;
+    margin-bottom: 30px;
+    .inner {
+        position: relative;
+        text-align: center;
+        &:before {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            margin-top: -50px;
+            height: 100px;
+            border-right: 1px solid #e4e1d5;
+            content: "";
+        }
+        &:hover {
+            .icon {
+                -webkit-transform: scale(-1) rotate(180deg);
+                -ms-transform: scale(-1) rotate(180deg);
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+    &:last-child {
+        .inner {
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .icon {
+        display: inline-block;
+        font-size: 54px;
+        line-height: 1em;
+        color: var(--theme-color1);
+        -webkit-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+    h5 {
+        position: relative;
+        display: block;
+        font-size: 18px;
+        line-height: 30px;
+        color: var(--theme-color3);
+        font-weight: 600;
+        a {
+            display: inline-block;
+            color: var(--theme-color3);
+            -webkit-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+            &:hover {
+                color: var(--theme-color2);
+            }
+        }
+    }
+}
+
+/***
+
+====================================================================
+            Fun Fact Section Two
+====================================================================
+
+***/
+
+.fun-fact-section-two {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 120px 0 80px;
+    .counter-column {
+        .icon {
+            position: relative;
+            display: block;
+            height: 181px;
+            width: 181px;
+            background: url(../images/icons/funfact-bg-1.png) center no-repeat;
+            color: var(--theme-color1);
+            font-size: 64px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        &:hover {
+            .icon {
+                &:before {
+                    position: relative;
+                    -webkit-transition: all 400ms ease;
+                    -o-transition: all 400ms ease;
+                    transition: all 400ms ease;
+                    -webkit-transform: scale(-1) rotate(180deg);
+                    -ms-transform: scale(-1) rotate(180deg);
+                    transform: scale(-1) rotate(180deg);
+                }
+            }
+        }
+        &:nth-child(2) {
+            .icon {
+                background: url(../images/icons/funfact-bg-2.png) center no-repeat;
+                color: #b1656a;
+            }
+        }
+        &:nth-child(3) {
+            .icon {
+                background: url(../images/icons/funfact-bg-3.png) center no-repeat;
+                color: #c8ac59;
+            }
+        }
+        &:nth-child(4) {
+            .icon {
+                background: url(../images/icons/funfact-bg-4.png) center no-repeat;
+                color: #50b7a3;
+            }
+        }
+    }
+    .count-box {
+        position: relative;
+        font-size: 70px;
+        color: var(--theme-color3);
+        line-height: 1em;
+        font-family: var(--third-font);
+        .count-text {
+            font-size: 70px;
+            color: var(--theme-color3);
+            line-height: 1em;
+            margin-bottom: 10px;
+        }
+    }
+    .counter-title {
+        display: block;
+        font-size: 18px;
+        line-height: 26px;
+        color: #797f7d;
+        margin-top: 10px;
+    }
+}

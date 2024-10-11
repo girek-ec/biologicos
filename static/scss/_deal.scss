@@ -1,0 +1,137 @@
+/***
+
+====================================================================
+    Deal Section
+====================================================================
+
+***/
+.deal-section {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 160px 0 120px;
+    .content-box {
+        position: relative;
+        max-width: 600px;
+    }
+    .badge {
+        position: absolute;
+        right: -220px;
+        top: 0;
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        background: var(--theme-color1);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 30px;
+        text-align: center;
+        font-weight: 400;
+        white-space: pre-wrap;
+        font-family: var(--third-font);
+        &:before {
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+            height: 20px;
+            width: 20px;
+            background: var(--theme-color1);
+            -webkit-transform: rotate(5deg);
+            -ms-transform: rotate(5deg);
+            transform: rotate(5deg);
+            content: "";
+        }
+    }
+    .text {
+        font-size: 18px;
+        line-height: 2em;
+        font-weight: 400;
+        color: #797f7d;
+    }
+}
+.time-counter {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    .counter-column {
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 120px;
+        height: 140px;
+        font-size: 14px;
+        line-height: 2em;
+        color: #797f7d;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
+        z-index: 7;
+        letter-spacing: .01em;
+        border-radius: 20px;
+        padding: 10px 0 0;
+        margin: 0;
+        background: #ffffff;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        .count {
+            position: relative;
+            display: block;
+            font-size: 42px;
+            line-height: 30px;
+            color: var(--theme-color1);
+            font-family: var(--third-font);
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+    }
+}
+.deal-section.style-two {
+    padding: 120px 0;
+    .auto-container {
+        max-width: 1580px;
+    }
+    .content-box {
+        max-width: 100%;
+        padding: 80px 20px 110px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #f8f5ee;
+    }
+    .outer-box {
+        position: relative;
+        padding: 20px;
+        border: 3px dotted #e4e1d5;
+        border-radius: 10px;
+    }
+    .time-counter {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .counter-column {
+            margin: 0 10px 20px;
+        }
+    }
+}

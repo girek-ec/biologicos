@@ -1,0 +1,86 @@
+//Root 
+
+:root {
+  //theme color
+  --theme-color1: #43aa5c;
+  --theme-color2: #f8ca38;
+  --theme-color3: #164333;
+  --bg-theme-color1: var(--theme-color1);
+  --bg-theme-color2: var(--theme-color2);
+  --bg-theme-color3: var(--theme-color3);
+  --border-theme-color1: var(--theme-color1);
+  --border-theme-color2: var(--theme-color2);
+  --border-theme-color3: var(--theme-color3);
+  
+  --text-color-bg-theme-color1: #fff;
+  --text-color-bg-theme-color2: #164333;
+  --text-color-bg-theme-color3: #fff;
+
+
+  //text heading color
+  --text-color:         #797f7d;
+  --headings-color:     #003c38;
+  --link-color:         #352F27;
+  --link-hover-color:   #5B8C51;
+
+
+  //font family
+  --text-font: "Poppins",sans-serif;
+  --title-font: 'DM Sans', sans-serif;
+  --third-font: "Schoolbell",cursive;
+
+
+  //body
+  --body-font-size:     16px;
+  --body-font-weight:   400;
+  --body-font-weight-bold:   400;
+  --body-line-height:     1.9;
+
+
+
+  //heading font size + weight
+  --line-height-heading: 1.4;
+  --line-height-heading-h1: 1.1;
+  --line-height-heading-small: 1.4;
+
+  --h1-font-size:     90px;
+  --h2-font-size:     42px;
+  --h3-font-size:     30px;
+  --h4-font-size:     24px;
+  --h5-font-size:     20px;
+  --h6-font-size:     18px;
+
+  --h1-font-weight: 800;
+  --h2-font-weight: 800;
+  --h3-font-weight: 800;
+  --h4-font-weight: 800;
+  --h5-font-weight: 700;
+  --h6-font-weight: 700;
+
+
+  //section title
+  --sec-title-color:                 var(--headings-color);
+  --sec-title-font-size:             var(--h2-font-size);
+  --sec-title-font-family:           var(--title-font);
+  --sec-title-font-weight:           var(--h2-font-weight);
+
+  //section sub title
+  --sec-title-subtitle-color:        #819291;
+  --sec-title-subtitle-font-size:    16px;
+  --sec-title-subtitle-font-family:  var(--text-font);
+  --sec-title-subtitle-font-weight:  700;
+
+
+  //news details page
+  --theme-light-background: #f8f6f1;
+  --theme-light-background-text-color: var(--headings-color);
+  --theme-black:        #0e2207;
+
+
+  //container
+  --container-width: 1200px;
+  --small-container-width: 1000px;
+  --large-container-width: 1550px;
+  --container-pt:    120px;
+  --container-pb:    120px;
+}

@@ -1,0 +1,28 @@
+/*=======================
+Scroll To Top style
+=======================*/
+.scroll-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    color: var(--theme-color3);
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--theme-color2);
+    z-index: 100;
+    display: none;
+    border-radius: 50%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.10);
+    box-shadow: 0 0 5px rgba(0,0,0,0.10);
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    &:hover {
+        background: var(--theme-color1);
+        color: #ffffff;
+    }
+}

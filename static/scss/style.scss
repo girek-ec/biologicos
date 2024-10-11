@@ -1,0 +1,112 @@
+/* Fesho | Organic Store HTML Template
+
+Template Name: Fesho
+Version: 1.0.0
+License: copyright commercial
+
+/************ TABLE OF CONTENTS ***************
+1. Fonts
+2. Reset
+3. Global
+4. Main Header  / Two / Three
+5. Sticky Header 
+6. Mobile Menu
+7. Search Popup 
+8. Section Title
+9. Page Title
+10. Main Slider
+11. Banner Section / Two
+12. Top Banners
+13. About Section / Two / Three
+14. Categories Section / Two
+15. Deal Section
+16. Call To Action
+17. Products Section
+18. Featured Products
+19. Features Section
+20. Clients Section 
+21. Benefits Section
+22. Testimonial Section / Two / Three
+23. Fun Fact Section / Two 
+24. Team Section
+25. News Section
+26. Gallery Section / Two
+27. Main Footer
+**********************************************/
+
+@import "common/root.scss";
+@import "common/mixing.scss";
+
+/*** 
+
+====================================================================
+Fonts
+====================================================================
+
+***/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&Poppins:wght@400;500;600;700&family=Schoolbell&display=swap');
+
+
+@import url('animate.css');
+@import url('owl.css');
+@import url('swiper.min.css');
+@import url('jquery.fancybox.min.css');
+@import url("jquery-ui.css");
+@import url('linear.css');
+@import url('fontawesome-all.css');
+@import url('flaticon.css');
+@import url('tm-bs-mp.css');
+@import url('tm-utility-classes.css');
+
+
+
+
+// import SCSS components one by one
+@import "reset.scss";
+@import "common/loader.scss";
+@import "button.scss";
+@import "animate-icon.scss";
+@import "scroll-to-top.scss";
+@import "search-popup.scss";
+
+@import "header.scss";
+@import "mobile-menu.scss";
+
+@import "banner.scss";
+@import "main-slider.scss";
+
+@import "section-title.scss";
+
+@import "about.scss";
+@import "benefit.scss";
+@import "call-to-action.scss";
+@import "deal.scss";
+@import "features.scss";
+@import "form.scss";
+@import "funfact.scss";
+@import "gallery.scss";
+@import "clients.scss";
+@import "news.scss";
+@import "team.scss";
+@import "testimonials.scss";
+@import "accordion.scss";
+@import "pricing.scss";
+
+@import "shop/loader.scss";
+
+
+
+//inner
+@import "inner/page-title.scss";
+@import "inner/404.scss";
+@import "inner/service-details.scss";
+@import "inner/project-details.scss";
+@import "inner/news-details.scss";
+@import "inner/news-sidebar.scss";
+@import "inner/news-comment.scss";
+@import "inner/team-details.scss";
+@import "inner/contact-page.scss";
+
+
+@import "footer.scss";

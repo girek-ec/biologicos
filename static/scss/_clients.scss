@@ -1,0 +1,58 @@
+/***
+
+====================================================================
+    Clients Section
+====================================================================
+
+***/
+.clients-section {
+    position: relative;
+    background: #f8f7f0;
+    padding: 120px 0 0;
+    z-index: 1;
+}
+.sponsors-outer {
+    position: relative;
+    padding-bottom: 70px;
+    border-bottom: 2px solid #eee;
+}
+.clients-carousel {
+    .slide-item {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        a {
+            position: relative;
+        }
+        img {
+            display: inline-block;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            opacity: .15;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        &:hover {
+            img {
+                opacity: 1;
+            }
+        }
+    }
+    .owl-nav {
+        display: none;
+    }
+    .owl-dots {
+        display: none;
+    }
+}
+.clients-section.style-two {
+    background: #ffffff;
+    padding: 0;
+    .sponsors-outer {
+        padding: 75px 0;
+        border-top: 2px solid #eee;
+        border-bottom: 0;
+    }
+}

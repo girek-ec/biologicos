@@ -1,0 +1,71 @@
+/***
+
+====================================================================
+    Features Section
+====================================================================
+
+***/
+.features-section {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-image: url(../images/icons/pattern-4.png);
+    padding: 110px 0 130px;
+    z-index: 2;
+    margin-bottom: -70px;
+    .auto-container {
+        max-width: 1530px;
+    }
+}
+.feature-block {
+    position: relative;
+    margin-bottom: 30px;
+    .inner {
+        position: relative;
+        padding-left: 80px;
+        min-height: 70px;
+        &:hover {
+            .icon {
+                -webkit-transform: scale(-1) rotate(180deg);
+                -ms-transform: scale(-1) rotate(180deg);
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+    .icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        font-size: 54px;
+        line-height: 1.2em;
+        color: var(--theme-color2);
+        -webkit-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+    h5 {
+        position: relative;
+        display: block;
+        font-size: 18px;
+        line-height: 30px;
+        color: #ffffff;
+        font-weight: 600;
+        a {
+            display: inline-block;
+            color: #ffffff;
+            -webkit-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+            &:hover {
+                color: var(--theme-color2);
+            }
+        }
+    }
+    .text {
+        font-size: 16px;
+        line-height: 1.4em;
+        color: #8fa89f;
+    }
+}

@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+{% block metas %}
+    <meta property="og:url" content=" " />
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content=" " />
+    <meta property="og:description" content="" />
+    <meta property="og:image"  content=" }" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+    <meta property="fb:app_id" content="926164441218858" />
+{% endblock %}
+{% block principal %}
+	<!--Project Details Start-->
+	<section class="project-details">
+		<div class="container" style="padding-top: 0px !important; " >
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="project-details__top">
+						<div class="project-details__img"> <img src="/media/{{ blogs.imagen }}" alt=""> </div>
+					</div>
+				</div>
+			</div>
+			<div class="project-details__content">
+				<div class="row">
+					<div class="col-xl-8 col-lg-8">
+						<div class="project-details__content-left">
+							<h3 class="">{{ blogs.titulo }}</h3>
+                            <p class="" style="text-align: justify !important;" >{{ blogs.detalle }}</p>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4">
+						<div class="project-details__content-right">
+							<div class="project-details__details-box">
+								<div class="project-details__bg-shape"> </div>
+								<ul class="list-unstyled project-details__details-list">
+									<li>
+										<p class="project-details__client">Fecha</p>
+										<h4 class="project-details__name">{{ blog.autor}}</h4>
+									</li>
+									<li>
+										<p class="project-details__client">Autor</p>
+										<h4 class="project-details__name">{{ blog.autor}}</h4>
+									</li>
+                                    
+                                    <li>
+										<p class="project-details__client">Compartir</p>
+										<div class="project-details__social">  
+                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.biologicos.ec/post/{{blogs.id }}" target="_blank">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                        </div>
+									</li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		</div>
+	</section>
+	<!--Project Details End-->
+
+{% endblock %}	

@@ -1,0 +1,282 @@
+{% extends 'index.html' %}
+{% block metas %}
+    <meta property="og:url" content=" /post/{{ blog.id }}" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="/post/{{ blog.titulo }} " />
+    <meta property="og:description" content="/post/{{ blog.titulo }} " />
+    <meta property="og:image"  content=" /media/{{ blog.imaGEN }} " />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+{% endblock %}
+{% block principal %}
+
+	<!-- Start main-content -->
+	<section class="page-title" style="background-image: url(images/background/page-title.jpg);">
+		<div class="auto-container">
+			<div class="title-outer">
+				<h1 class="title">Shop</h1>
+				<ul class="page-breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li>Products</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end main-content -->
+
+	<!-- Featured Products -->
+	<section class="featured-products">
+		<span class="bg-shape"></span>
+
+		<div class="auto-container">
+
+			<!--MixitUp Galery-->
+			<div class="mixitup-gallery">
+				<!--Filter-->
+				<div class="filters clearfix">
+					<ul class="filter-tabs filter-btns clearfix">
+						<li class="active filter" data-role="button" data-filter="all">All</li>
+						<li class="filter" data-role="button" data-filter=".dairy">Dairy</li>
+						<li class="filter" data-role="button" data-filter=".pantry">Pantry</li>
+						<li class="filter" data-role="button" data-filter=".meat">Meat</li>
+						<li class="filter" data-role="button" data-filter=".fruit">Fruits</li>
+						<li class="filter" data-role="button" data-filter=".vagetables">Vagetables</li>
+					</ul>
+				</div>
+
+				<div class="filter-list row">
+					<!--Product Block-->
+					<div class="product-block all mix pantry fruit col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image"><a href="shop-product-details.html"><img src="https://via.placeholder.com/260x260" alt=""/></a></div>
+							<div class="content">
+								<h4><a href="shop-product-details.html">Bananas</a></h4>
+								<span class="price">$32.00</span>
+								<span class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+							</div>
+							<div class="icon-box">
+								<a href="shop-product-details.html" class="ui-btn like-btn"><i class="fa fa-heart"></i></a>
+								<a href="shop-cart.html" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<!--Product Block-->
+					<div class="product-block all mix dairy meat fruit col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image"><a href="shop-product-details.html"><img src="https://via.placeholder.com/260x260" alt=""/></a></div>
+							<div class="content">
+								<h4><a href="shop-product-details.html">Potatos</a></h4>
+								<span class="price">$32.00</span>
+								<span class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+							</div>
+							<div class="icon-box">
+								<a href="shop-product-details.html" class="ui-btn like-btn"><i class="fa fa-heart"></i></a>
+								<a href="shop-cart.html" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<!--Product Block-->
+					<div class="product-block all mix pantry fruit vagetables col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image"><a href="shop-product-details.html"><img src="https://via.placeholder.com/260x260" alt=""/></a></div>
+							<div class="content">
+								<h4><a href="shop-product-details.html">Apples</a></h4>
+								<span class="price">$32.00</span>
+								<span class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+							</div>
+							<div class="icon-box">
+								<a href="shop-product-details.html" class="ui-btn like-btn"><i class="fa fa-heart"></i></a>
+								<a href="shop-cart.html" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<!--Product Block-->
+					<div class="product-block all mix dairy meat vagetables col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image"><a href="shop-product-details.html"><img src="https://via.placeholder.com/260x260" alt=""/></a></div>
+							<div class="content">
+								<h4><a href="shop-product-details.html">Lettus</a></h4>
+								<span class="price">$32.00</span>
+								<span class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+							</div>
+							<div class="icon-box">
+								<a href="shop-product-details.html" class="ui-btn like-btn"><i class="fa fa-heart"></i></a>
+								<a href="shop-cart.html" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<!--Product Block-->
+					<div class="product-block all mix pantry meat fruit col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image"><a href="shop-product-details.html"><img src="https://via.placeholder.com/260x260" alt=""/></a></div>
+							<div class="content">
+								<h4><a href="shop-product-details.html">Red Grapes</a></h4>
+								<span class="price">$32.00</span>
+								<span class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+							</div>
+							<div class="icon-box">
+								<a href="shop-product-details.html" class="ui-btn like-btn"><i class="fa fa-heart"></i></a>
+								<a href="shop-cart.html" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<!--Product Block-->
+					<div class="product-block all mix dairy pantry col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image"><a href="shop-product-details.html"><img src="https://via.placeholder.com/260x260" alt=""/></a></div>
+							<div class="content">
+								<h4><a href="shop-product-details.html">Oranges</a></h4>
+								<span class="price">$32.00</span>
+								<span class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+							</div>
+							<div class="icon-box">
+								<a href="shop-product-details.html" class="ui-btn like-btn"><i class="fa fa-heart"></i></a>
+								<a href="shop-cart.html" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<!--Product Block-->
+					<div class="product-block all mix fruit vagetables col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image"><a href="shop-product-details.html"><img src="https://via.placeholder.com/260x260" alt=""/></a></div>
+							<div class="content">
+								<h4><a href="shop-product-details.html">Onions</a></h4>
+								<span class="price">$32.00</span>
+								<span class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+							</div>
+							<div class="icon-box">
+								<a href="shop-product-details.html" class="ui-btn like-btn"><i class="fa fa-heart"></i></a>
+								<a href="shop-cart.html" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<!--Product Block-->
+					<div class="product-block all mix dairy pantry meat vagetables col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image"><a href="shop-product-details.html"><img src="https://via.placeholder.com/260x260" alt=""/></a></div>
+							<div class="content">
+								<h4><a href="shop-product-details.html">Carrots</a></h4>
+								<span class="price">$32.00</span>
+								<span class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+							</div>
+							<div class="icon-box">
+								<a href="shop-product-details.html" class="ui-btn like-btn"><i class="fa fa-heart"></i></a>
+								<a href="shop-cart.html" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Featured Products -->
+
+	 <!-- Main Footer -->
+	<footer class="main-footer">
+		<!--Widgets Section-->
+		<div class="widgets-section">
+			<div class="auto-container">
+
+				<div class="row">
+					<!--Footer Column-->
+					<div class="footer-column col-lg-4 col-md-6 col-sm-12">
+						<div class="footer-widget about-widget">
+							<div class="logo"><a href="index.html"><img src="images/logo-2.png" alt="" /></a></div>
+							<div class="text">We’re providing every day fresh and quality products for you.</div>
+							<ul class="social-icon-one">
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!--Footer Column-->
+					<div class="footer-column col-lg-2 col-md-6 col-sm-12">
+						<div class="footer-widget">
+							<h5 class="widget-title">Explore</h5>
+							<ul class="user-links">
+								<li><a href="#">About Company</a></li>
+								<li><a href="#">Our Services</a></li>
+								<li><a href="#">Become a Seller</a></li>
+								<li><a href="#">New Products</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!--Footer Column-->
+					<div class="footer-column col-lg-3 col-md-6 col-sm-12">
+						<div class="footer-widget">
+							<h5 class="widget-title">Contact</h5>
+							<div class="widget-content">
+								<ul class="contact-list contact-info">
+									<li>
+										<i class="fa fa-phone-square"></i>
+										<strong>Phone</strong>
+										<a href="tel:+926668880000">+92 666 888 0000</a>
+									</li>
+									<li>
+										<strong>Email</strong>
+										<i class="fa fa-envelope"></i>
+										<a href="mailto:needhelp@company.com">needhelp@company.com</a>
+									</li>
+									<li>
+										<strong>Address</strong>
+										<i class="fa fa-map-marker"></i>
+										66 road, broklyn street new york
+									 </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!--Footer Column-->
+					<div class="footer-column col-lg-3 col-md-6 col-sm-12">
+						<div class="footer-widget Newsletter-widget">
+							<h5 class="widget-title">Newsletter</h5>
+							<div class="widget-content">
+								<div class="subscribe-form">
+									<form method="post" action="#">
+										<div class="form-group">
+											<input type="email" name="email" class="email" value="" placeholder="Enter your email" required="">
+											<button type="button" class="theme-btn btn-style-one"><span class="btn-title">Subscribe</span></button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!--Footer Bottom-->
+		<div class="footer-bottom">
+			<div class="auto-container">
+				<div class="inner-container">
+					 <div class="copyright-text">
+						<p>© Copyright 2022 by <a href="index.html">Company.com</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--End Main Footer -->
+
+</div><!-- End Page Wrapper -->
+
+
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+{% endblock %}		

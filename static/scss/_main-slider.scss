@@ -1,0 +1,104 @@
+
+
+/*** 
+
+====================================================================
+  Main Slider
+====================================================================
+
+***/
+
+.main-slider {
+    position: relative;
+}
+
+.main-slider:after,
+.main-slider:before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    content: "";
+    background-image: url(../images/icons/pattern-1.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    z-index: 1;
+}
+
+.main-slider:after{
+    top: auto;
+    bottom: -50px;
+    background-image: url(../images/icons/pattern-2.png);
+}
+
+.tp-bannertimer{
+    display: none;
+}
+
+.main-slider .title {
+    position: relative;
+    display: inline-block;
+    font-size: 26px;
+    color: var(--theme-color1);
+    font-family: var(--third-font);
+}
+
+.main-slider .title span {
+    text-decoration: underline;
+}
+
+.main-slider h2 {
+    position: relative;
+    display: block;
+    font-size: 90px;
+    line-height: 1.1em;
+    color: var(--theme-color3);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.main-slider .event-info {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.main-slider .event-info li {
+    font-size: 16px;
+    line-height: 28px;
+    color: #ffffff;
+    font-weight: 400;
+    margin-right: 30px;
+}
+
+.main-slider .event-info li i {
+    margin-right: 10px;
+    color: #ffbf00;
+}
+
+.main-slider .btn-box {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.main-slider .btn-box .theme-btn {
+    display: inline-block;
+    line-height: 30px;
+    padding: 15px 30px;
+    white-space: nowrap;
+    margin-right: 20px !important;
+    min-width: 180px !important;
+}

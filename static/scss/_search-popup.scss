@@ -1,0 +1,198 @@
+/***
+
+====================================================================
+  Search Popup
+====================================================================
+
+***/
+.search-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  overflow: hidden;
+  -webkit-transform: scale(.95);
+  -ms-transform: scale(.95);
+  transform: scale(.95);
+  .search-back-drop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f8f5ee;
+    opacity: .95;
+  }
+  .close-search {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 26px;
+    color: var(--theme-color3);
+    z-index: 3;
+    border-radius: 50%;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  .search-inner {
+    position: relative;
+    display: block;
+    top: 40%;
+    height: auto;
+    z-index: 1;
+    width: calc(100% - 60px);
+    max-width: 800px;
+    margin: auto;
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px);
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .form-group {
+    form {
+      position: relative;
+    }
+    position: relative;
+    margin: 0px;
+    input[type="text"] {
+      position: relative;
+      display: block;
+      width: 100%;
+      font-size: 18px;
+      line-height: 30px;
+      color: #333333;
+      padding: 15px 30px;
+      height: 60px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      -webkit-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+    }
+    input[type="search"] {
+      position: relative;
+      display: block;
+      width: 100%;
+      font-size: 18px;
+      line-height: 30px;
+      color: #333333;
+      padding: 15px 30px;
+      height: 60px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      -webkit-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+    }
+    input[type="submit"] {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      color: #ffffff;
+      background-color: var(--theme-color1);
+      text-align: center;
+      font-size: 22px;
+      border-radius: 0 5px 5px 0;
+      -webkit-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+    }
+    button {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      color: #ffffff;
+      background-color: var(--theme-color1);
+      text-align: center;
+      font-size: 22px;
+      border-radius: 0 5px 5px 0;
+      -webkit-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+    }
+  }
+  input {
+    &::-webkit-input-placeholder {
+      color: inherit;
+      color: inherit;
+    }
+    &::-moz-placeholder {
+      color: inherit;
+      color: inherit;
+    }
+    &:-ms-input-placeholder {
+      color: inherit;
+      color: inherit;
+    }
+    &::-ms-input-placeholder {
+      color: inherit;
+      color: inherit;
+    }
+    &::placeholder {
+      color: inherit;
+    }
+  }
+  textarea {
+    &::-webkit-input-placeholder {
+      color: inherit;
+      color: inherit;
+    }
+    &::-moz-placeholder {
+      color: inherit;
+      color: inherit;
+    }
+    &:-ms-input-placeholder {
+      color: inherit;
+      color: inherit;
+    }
+    &::-ms-input-placeholder {
+      color: inherit;
+      color: inherit;
+    }
+    &::placeholder {
+      color: inherit;
+    }
+  }
+}
+.moblie-search-active {
+  .search-popup {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    border-radius: 0%;
+    .search-inner {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-transition-delay: 500ms;
+      -o-transition-delay: 500ms;
+      transition-delay: 500ms;
+    }
+  }
+}

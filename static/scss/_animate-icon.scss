@@ -1,0 +1,110 @@
+/***
+
+====================================================================
+  Anim Icons
+====================================================================
+
+***/
+@-webkit-keyframes "bounce-y" {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes "bounce-y" {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes "bounce-x" {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes "bounce-x" {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+.anim-icons {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    .icon {
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .bounce-y {
+        -webkit-animation: bounce-y 10s infinite linear;
+        animation: bounce-y 10s infinite linear;
+    }
+    .bounce-x {
+        -webkit-animation: bounce-x 10s infinite linear;
+        animation: bounce-x 10s infinite linear;
+    }
+}
+.anim-icons.full-width {
+    max-width: 100%;
+}
+.icon-lemon {
+    width: 185px;
+    height: 185px;
+    background-image: url(../images/icons/lemon.png);
+}
+.icon-leaf {
+    width: 155px;
+    height: 155px;
+    background-image: url(../images/icons/leaf.png);
+}
+.icon-orange {
+    width: 165px;
+    height: 165px;
+    background-image: url(../images/icons/orange.png);
+}
+.icon-dots {
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/icons/dots.png);
+}

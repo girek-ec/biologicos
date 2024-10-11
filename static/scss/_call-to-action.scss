@@ -1,0 +1,44 @@
+/***
+
+====================================================================
+        Call To Action
+====================================================================
+
+***/
+.call-to-action {
+    position: relative;
+    .outer-box {
+        position: relative;
+        background-image: url(../images/background/2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 40px 55px;
+        border-radius: 0 0 10px 10px;
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--theme-color1);
+            content: "";
+            border-radius: 0 0 10px 10px;
+            opacity: .8;
+        }
+    }
+    .theme-btn {
+        position: relative;
+        line-height: 30px;
+        padding: 15px 50px;
+    }
+}
