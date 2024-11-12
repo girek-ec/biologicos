@@ -9,6 +9,10 @@ class Beneficios_productoInline(admin.StackedInline):
     model = Beneficios_producto
     extra = 0
 
+class Aplica_dosis_productoInline(admin.StackedInline):
+    model = Aplica_dosis_producto
+    extra = 0
+
 
 @admin.register(Edit_pag)
 class Edit_pagAdmin(admin.ModelAdmin):
@@ -31,13 +35,18 @@ class SliderAdmin(admin.ModelAdmin):
 class ProductoAdmin(admin.ModelAdmin):
     list_display = Attr(Producto) + ["vista_previa"]
     list_display_links = Attr(Producto)
-    inlines = [Beneficios_productoInline ]
+    inlines = [Beneficios_productoInline,Aplica_dosis_productoInline ]
 
 
 @admin.register(Beneficios_producto)
 class Beneficios_productoAdmin(admin.ModelAdmin):
     list_display = Attr(Beneficios_producto) 
     list_display_links = Attr(Beneficios_producto)
+
+@admin.register(Aplica_dosis_producto)
+class Aplica_dosis_productoAdmin(admin.ModelAdmin):
+    list_display = Attr(Aplica_dosis_producto)
+    list_display_links = Attr(Aplica_dosis_producto)
 
 
 @admin.register(Blog)

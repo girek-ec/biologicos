@@ -329,19 +329,19 @@ img {
  * -----------------------------------------------
 */
 ::-moz-selection {
-  background: #fff;
+  background: #490606;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #fff;
-  color: #fff;
+  background: #17610f;
+  color: #128205;
   text-shadow: none;
 }
 
 ::-moz-selection {
   background: #333; /* Firefox */
-  color: #fff;
+  color: #17610f;
   text-shadow: none;
 }
 
@@ -3817,13 +3817,13 @@ Section Title
 }
 .fun-fact-section .count-box {
   position: relative;
-  font-size: 70px;
+  font-size: 50px;
   color: #ffc737;
   line-height: 1em;
   font-family: var(--third-font);
 }
 .fun-fact-section .count-box .count-text {
-  font-size: 70px;
+  font-size: 50px;
   color: #ffc737;
   line-height: 1em;
   margin-bottom: 10px;

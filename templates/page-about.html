@@ -11,22 +11,10 @@
 {% endblock %}
 {% block principal %}
 
-	<!-- Start main-content -->
-	<section class="page-title" style="background-image: url('/media/{{ edit_web.imag_fondo_05 }}') !important;">
-		<div class="auto-container">
-			<div class="title-outer">
-				<h1 class="title">Nosotros</h1>
-				<ul class="page-breadcrumb">
-					<li><a href="-">Inicio</a></li>
-					<li>Nosotros</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<!-- end main-content -->
+
 
 	<!-- About Section Two -->
-	<section class="about-section-two">
+	<section class="about-section-two" style="padding-top: 50px !important;">
 		<div class="auto-container">
 			<div class="row">
 				<!-- Image Column -->
@@ -43,9 +31,8 @@
 					<div class="inner-column">
 						<div class="float-text">fesho</div>
 						<div class="sec-title">
-							<span class="sub-title">{{ edit_web.about_sub_titulo1 }}</span>
+                            <h4>{{ edit_web.about_sub_titulo1 }}</h4>
 							<h2>{{ edit_web.about_titulo1 }}</h2>
-							<h4>{{ edit_web.about_sub_titulo2 }}</h4>
 							<div class="text">{{ edit_web.about_detalle1 }}</div>
 						</div>
 						<div class="info-box">
@@ -54,7 +41,6 @@
 								<li>{{ edit_web.about_destacado_01 }}</li>
                                 <li>{{ edit_web.about_destacado_02 }}</li>
                                 <li>{{ edit_web.about_destacado_03 }}</li>
-                                <li>{{ edit_web.about_destacado_04 }}</li>
 							</ul>
 						</div>
 					</div>
@@ -71,37 +57,45 @@
 				<div class="row">
 					<!--Column-->
 					<div class="counter-column col-lg-6 col-md-6 col-sm-12">
-						<div class="count-box">Misión</div>
+						<div class="count-box" style="font-size: 50px !important;">Misión</div>
 						<p class="counter-title">{{ edit_web.mision }}</p>
 					</div>
                     
 
 					<!--Column-->
 					<div class="counter-column col-lg-6 col-md-6 col-sm-12">
-						<div class="count-box">Visión</div>
+						<div class="count-box" style="font-size: 50px !important;">Visión</div>
 						<p class="counter-title">{{ edit_web.vision }}</p>
 					</div>
 
 					
 				</div>
 			</div>
+            
 		</div>
+    
 
 		
 	</section>
 	<!--End Fun Fact Section -->
+    
+    <div class="sec-title" style="text-align: center !important;">
+        
+         <div class="thumb">
+             <img src="/media/{{ biologicos.logo_cuadrado }}" alt="">
+         </div>
+        
+    </div>
 
 	<!-- Featured Products -->
-	<section class="featured-products">
+	<section class="featured-products" style="padding-top: 0px !important;">
 		<div class="auto-container">
 			<div class="sec-title text-center">
-				<span class="sub-title">Nuestras Marcas</span>
-				 <h2>Mejores productos para el sector agrícola</h2>
+				<span class="sub-title"> Nuestras Marcas </span>
+				 <h2> Mejores productos para el sector agrícola </h2>
 			</div>
 
 			<div class="row">
-                
-                
                 {% for producto in productos %}
                     <!--Product Block-->
                     <div class="product-block col-lg-3 col-md-6 col-sm-12">
@@ -111,10 +105,11 @@
                         </div>
                     </div>
                 {% endfor %}
-
 			</div>
 		</div>
 	</section>
 	<!-- End Featured Products -->
+    <br><br><br>
+    
 
 {% endblock %}

@@ -20,15 +20,11 @@
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="/static/js/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="/static/js/respond.js"></script><![endif]-->
+
 </head>
 
 <body>
-
 <div class="page-wrapper">
-
-	
 
 	<!-- Main Header-->	
 	<header class="main-header header-style-one">
@@ -63,41 +59,34 @@
 			<div class="auto-container">
 				<!-- Main box -->
 				<div class="main-box">
-					<div class="logo"><a href="/"><img src="/media/{{ biologicos.logo}}" alt="" title="Fesho"></a></div>
-
+					<div class="logo"><a href="/"><img src="/media/{{ biologicos.logo_horiz_color}}" alt="" title="Biológicos"></a></div>
 					<!--Nav Box-->
 					<div class="nav-outer">
-
 						<nav class="nav main-menu">
 							<ul class="navigation">
+                                <li><a href="/"></a></li>
 								<li><a href="/">Inicio</a></li>
 								<li><a href="/empresa/">Nosotros</a></li>
-								<li class="current dropdown"><a href="/productos/">Productos</a>
+								<li class="current dropdown"><a href="/productos/" style="color: #7F858B !important;">Productos</a>
 									<ul>
                                         {% for producto in productos %}
 										<li><a href="/producto/{{ producto.id }}">{{ producto.titulo }}</a></li>
                                         {% endfor %}
-								
 									</ul>
-								</li>
-                                <li><a href="/servicios/">Servicios</a></li>
-								
+								</li>	                            
 								<li><a href="/contacto/">Contacto</a></li>
                                 <li><a href="/blog/">Blog</a></li>
 							</ul>
 						</nav>
 						<!-- Main Menu End-->
-
 						<div class="outer-box">
-							<a href="#" class="theme-btn btn-style-one shop-now"><span class="btn-title">Chat WhatsApp</span></a>
-
+							<a href="https://api.whatsapp.com/send?phone=+593{{ biologicos.whatsapp }}&text=Hola%20Biológicos%20Alvarado%20%26%20Maggio" class="theme-btn btn-style-one shop-now"><span class="btn-title">Chat WhatsApp</span></a>
 							<!--Mobile Navigation Toggler-->
 							<div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</div>
 
 		<!-- Mobile Menu  -->
@@ -105,9 +94,13 @@
 			<div class="menu-backdrop"></div>
 
 			<!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
-			<nav class="menu-box">
+			<nav class="menu-box">  
 				<div class="upper-box">
-					<div class="nav-logo"><a href="/"><img src="/media/{{ biologicos.logo_horiz}}" alt="" title="Fesho"></a></div>
+					<div class="nav-logo">
+                        <a href="/">
+                            <img src="/media/{{ biologicos.logo_horiz_color}}" alt="" title="Biológicos">
+                        </a>
+                    </div>
 					<div class="close-btn"><i class="icon flaticon-close"></i></div>
 				</div>
 
@@ -116,54 +109,36 @@
 					<li>
 						<i class="fa fa-phone-square"></i>
 						<strong>Teléfono</strong>
-						<a href="tel:+{{marca.telefono}}">+{{marca.telefono}}</a>
+						<a href="tel:+{{biologicos.telefono}}">+{{biologicos.telefono}}</a>
 					</li>
 					<li>
 						<strong>Email</strong>
 						<i class="fa fa-envelope"></i>
-						<a href="mailto:{{marca.correo}}">{{marca.correo}}</a>
+						<a href="mailto:{{biologicos.correo}}">{{biologicos.correo}}</a>
 					</li>
 					<li>
 						<strong>Dirección</strong>
 						<i class="fa fa-map-marker"></i>
-						{{marca.direccion}}
+						{{biologicos.direccion}}
 					 </li>
 				</ul>
-
-
 				<ul class="social-links">
-					<li><a href="https://www.facebook.com/{{marca.facebook}}"><span class="fab fa-facebook"></span></a></li>
-					<li><a href="https://www.instagram.com/{{marca.instagram}}"><span class="fab fa-instagram"></span></a></li>
-					<li><a href="https://www.tiktok.com/{{marca.tiktok}}"><span class="fab fa-tiktok"></span></a></li>
-					<li><a href="https://www.youtube.com/{{marca.youtube}}"><span class="fab fa-youtube"></span></a></li>
+					<li><a href="https://www.facebook.com/{{biologicos.facebook}}"><span class="fab fa-facebook"></span></a></li>
+					<li><a href="https://www.instagram.com/{{biologicos.instagram}}"><span class="fab fa-instagram"></span></a></li>
+					<li><a href="https://www.youtube.com/{{biologicos.youtube}}"><span class="fab fa-youtube"></span></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=+593{{ biologicos.whatsapp }}&text=Hola%20Biológicos"><span class="fab fa-whatsapp"></span></a></li>
 				</ul>
 			</nav>
-		</div><!-- End Mobile Menu -->
-
-
-		<!-- Header Search -->
-		<div class="search-popup">
-			<span class="search-back-drop"></span>
-			<button class="close-search"><span class="fa fa-times"></span></button>
-
-			<div class="search-inner">
-				<form method="post" action="/">
-					<div class="form-group">
-						<input type="search" name="search-field" value="" placeholder="Search..." required="">
-						<button type="submit"><i class="lnr-icon-search"></i></button>
-					</div>
-				</form>
-			</div>
 		</div>
-		<!-- End Header Search -->
-
+        <!-- End Mobile Menu -->
+    
 		<!-- Sticky Header  -->
 		<div class="sticky-header">
 			<div class="auto-container">
 				<div class="inner-container">
 					<!--Logo-->
 					<div class="logo">
-						<a href="/" title=""><img src="/media/{{ biologicos.logo_horiz}}" alt="" title=""></a>
+						<a href="/" title=""><img src="/media/{{ biologicos.logo_horiz_color}}" alt="" title=""></a>
 					</div>
 
 					<!--Right Col-->
@@ -342,7 +317,6 @@
 						data-y="['middle','middle','middle','middle']"
 						data-textalign="['top','top','top','top']"
 						data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-							<span class="title">{{ slider.titulo }}</span>
 						</div>
 
 						<div class="tp-caption"
@@ -361,27 +335,14 @@
 						data-y="['middle','middle','middle','middle']"
 						data-textalign="['top','top','top','top']"
 						data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-							<h2>{{ slider.sub_titulo }}</h2>
+							
+                            <div class="banner-box-one  col-lg-8 col-md-8 col-sm-8" >
+                                <span class="title">{{ slider.titulo }}</span>
+                                <h2 style="font-size: 45px !important;">{{ slider.sub_titulo }}</h2>
+                                <h5 style="font-size: 20px !important;">{{ slider.detalle }}</h5>
+                            </div>
 						</div>
 
-						<div class="tp-caption"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[15,15,15,15]"
-						data-paddingright="[15,15,15,15]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="text"
-						data-height="none"
-						data-width="['700','750','700','450']"
-						data-whitespace="normal"
-						data-hoffset="['0','0','0','0']"
-						data-voffset="['120','120','90','100']"
-						data-x="['left','left','left','left']"
-						data-y="['middle','middle','middle','middle']"
-						data-textalign="['top','top','top','top']"
-						data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-							<a href="#" class="theme-btn btn-style-one"><span class="btn-title">Ir</span></a>
-						</div>
 					</li>
 					{% endfor %}
 				</ul>
@@ -404,12 +365,12 @@
 				</div>
 				{% for producto in productos %}
 				<!-- Banner Box One -->
-				<div class="banner-box-one  col-lg-4 col-md-6 col-sm-12" >
+				<div class="banner-box-one  col-lg-3 col-md-6 col-sm-12" >
 					<div class="inner-box" style="background-color: {{producto.color}}">
 						<div class="image"><img src="/media/{{producto.img_foto}}" alt=""></div>
 						<div class="content">
-							<span class="title">{{producto.sub_titulo2}}</span>
-							<h3>{{producto.sub_titulo}}</h3>
+							<span class="title">{{producto.sub_titulo}}</span>
+                            <img src="/media/{{producto.logo_producto}}" alt="">
 							<h3>{{producto.titulo}}</h3>
 							<a href="/producto/{{producto.id}}" class="theme-btn btn-style-two"><span class="btn-title">Ver.</span></a>
 						</div>
@@ -438,8 +399,8 @@
 					<div class="image-column col-lg-6 col-md-12 col-sm-12">
 						<div class="about-image-wrapper">
 							<figure class="bg-shape"><img src="/media/{{producto.img_fondo}}"    alt=""/></figure>
-							<figure class="image-1"><img src= "/media/{{producto.img_foto01}}"   alt=""/></figure>
-							<figure class="image-2"><img src= "/media/{{producto.img_producto}}" alt=""/></figure>
+							<figure class="image-1"><img src= "/media/{{producto.img_producto}}"   alt=""/></figure>
+							<figure class="image-2"><img src= "/media/{{producto.img_foto01}}" alt=""/></figure>
 						</div>
 					</div>
 
@@ -447,17 +408,18 @@
 					<div class="content-column col-lg-6 col-md-12 col-sm-12" >
 						<div class="inner-column wow fadeInRight">
 							<div class="sec-title">
-								<span class="sub-title">{{producto.sub_titulo2}}</span>
+								<span class="sub-title">{{producto.sub_titulo}}</span>
 								<h2>{{producto.titulo}}</h2>
 								<div class="text">{{producto.detalle}}</div>
 							</div>
 
 							<div class="row">
 								{% for beneficio in beneficios %}
-									<div class="about-block col-lg-6 col-md-6">
-										<h5><i class="fa fa-check-circle"></i>{{beneficio.titulo}}</h5>
-										<p>{{beneficio.detalle}}</p> 
-									</div>
+                                    {% if beneficio.producto == producto %}
+                                        <div class="about-block col-lg-6 col-md-6">
+                                            <h5 style="font-size: medium !important;"><i class="fa fa-check-circle"></i>{{beneficio.titulo}}</h5>
+                                        </div>
+                                    {% endif %}
 								{% endfor %}
 							</div>
 
@@ -471,7 +433,7 @@
 		
 		
 		<!-- Testimonial Section Two -->
-		<section class="testimonial-section-two">
+		<section class="testimonial-section-two" style="background-image: url(' /media/{{ edit_web.imag_fondo_02 }}' ) !important;">
 			<div class="anim-icons">
 				<span class="icon icon-lemon bounce-y"></span>
 				<span class="icon icon-leaf bounce-x"></span>
@@ -500,7 +462,7 @@
 										<!-- Testimonial Block Two -->
 										<div class="testimonial-block-two swiper-slide">
 											<div class="inner-box">
-												<div class="text">{{producto.detalle}}</div>
+												<div class="text">{{producto.utilizacion}}</div>
 												
 											</div>
 										</div>
@@ -538,7 +500,7 @@
 				<!-- Feature Block -->
 				<div class="feature-block col-lg-3 col-md-6 col-sm-12 mb-sm-50">
 					<div class="inner">
-						<span class="icon {{ edit_web.ico_bene1 }}"></span>
+						<span class="icon  flaticon-organic"></span>
 						<h5><a href="#">{{ edit_web.ico_titulo1 }}</a></h5>
 						<div class="text">{{ edit_web.ico_subti1 }}</div>
 					</div>
@@ -576,15 +538,15 @@
 	
 
 	<!-- Testimonial Section -->
-	<section class="testimonial-section pb-0">
+	<section class="testimonial-section pb-0" >
 		<div class="auto-container">
 			<div class="sec-title">
-				<span class="sub-title">Articulos en nuestro pag</span>
+				<span class="sub-title">Artículos en nuestro pág.</span>
 				<h2>Biológicos</h2>
 				<div class="text">Conoce los beneficios de utilizar productos orgánicos y biológicos en el cuidado de tus cultivos. En esta sección abordamos temas relacionados con el uso de bioestimulantes, fungicidas naturales, control biológico de plagas y más.</div>
 			</div>
 			<!-- Testimonial Carousel -->
-			<div class="testimonial-carousel owl-carousel owl-theme">
+			<div class="testimonial-carousel owl-carousel owl-theme" >
                 {% for blog in blogs %}
                 	<!-- Testimonial Block -->
                     <div class="testimonial-block">
@@ -592,7 +554,7 @@
                             <div class="info-box">
                                 <div class="thumb"><img src="/media/{{ blog.imagen }}" alt=""></div>
                                 <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                                <h4 class="name">{{ blog.autor }}</h4>
+                                <h6 class="name">{{ blog.titulo }}</h6>
                             </div>
                             <div class="text" > {{ blog.detalle|truncatewords:30  }} </div>
                             <a href="/post/{{ blog.id }}">
@@ -623,10 +585,6 @@
 	{% endblock %}
 
 
-
-
-
-
 	 <!-- Main Footer -->
 	<footer class="main-footer" style="background-image: url(' /media/{{ edit_web.imag_pie }}' ) !important;">
 		<!--Widgets Section-->
@@ -637,7 +595,7 @@
 					<!--Footer Column-->
 					<div class="footer-column col-lg-4 col-md-6 col-sm-12">
 						<div class="footer-widget about-widget">
-							<div class="logo"><a href="/"><img src="/media/{{ biologicos.logo_blanco}}" alt="" /></a></div>
+							<div class="logo"><a href="/"><img src="/media/{{ biologicos.logo_horiz_blanco}}" alt="" /></a></div>
 							<div class="text">La solución de hoy para el futuro</div>
 							<ul class="social-icon-one">
 								<li><a href="https://www.facebook.com/{{ biologicos.facebook }}"><span class="fab fa-facebook"></span></a></li>
@@ -653,10 +611,9 @@
 							<h5 class="widget-title">Explorar</h5>
 							<ul class="user-links">
 								<li><a href="/empresa/">Empresa</a></li>
-								<li><a href="/servicios/">Servicios</a></li>
 								<li><a href="/productos/">Productos</a></li>
-								<li><a href="/blog/">Contacto</a></li>
-								<li><a href="/contacto/">Blog</a></li>
+								<li><a href="/contacto/">Contacto</a></li>
+								<li><a href="/blog/">Blog</a></li>
 							</ul>
 						</div>
 					</div>
@@ -664,7 +621,7 @@
 					<!--Footer Column-->
 					<div class="footer-column col-lg-3 col-md-6 col-sm-12">
 						<div class="footer-widget">
-							<h5 class="widget-title">Contact</h5>
+							<h5 class="widget-title">Contacto</h5>
 							<div class="widget-content">
 								<ul class="contact-list contact-info">
 									<li>
@@ -697,16 +654,14 @@
 					<!--Footer Column-->
 					<div class="footer-column col-lg-3 col-md-6 col-sm-12">
 						<div class="footer-widget Newsletter-widget">
-							<h5 class="widget-title">Suscribirse</h5>
+							<h5 class="widget-title">Escribenos</h5>
 							<div class="widget-content">
-								<div class="subscribe-form">
-									<form method="post" action="#">
-										<div class="form-group">
-											<input type="email" name="email" class="email" value="" placeholder="Escriba su correo" required="">
-											<button type="button" class="theme-btn btn-style-one"><span class="btn-title">Suscribirse</span></button>
-										</div>
-									</form>
-								</div>
+								<!-- Main Menu End-->
+                                    <div class="outer-box">
+                                        <a href="https://api.whatsapp.com/send?phone=+593{{ biologicos.whatsapp }}&text=Hola%20Biológicos%20Alvarado%20%26%20Maggio" class="theme-btn btn-style-one shop-now"><span class="btn-title">Chat WhatsApp</span></a>
+                                        <!--Mobile Navigation Toggler-->
+                                        <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                                    </div>
 							</div>
 						</div>
 					</div>
@@ -728,7 +683,8 @@
 	</footer>
 	<!--End Main Footer -->
 
-</div><!-- End Page Wrapper -->
+</div>
+<!-- End Page Wrapper -->
 
 
 <!-- Scroll To Top -->
@@ -737,6 +693,7 @@
 
 <script src="/static/js/jquery.js"></script>
 <script src="/static/js/popper.min.js"></script>
+
 <!--Revolution Slider-->
 <script src="/static/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
 <script src="/static/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
@@ -751,12 +708,19 @@
 <script src="/static/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
 <script src="/static/js/main-slider-script.js"></script>
 <!--Revolution Slider-->
+
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/popper.min.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/jquery.fancybox.js"></script>
 <script src="/static/js/jquery.countdown.js"></script>
+<script src="/static/js/bxslider.js"></script>
+<script src="/static/js/mixitup.js"></script>
 <script src="/static/js/wow.js"></script>
 <script src="/static/js/appear.js"></script>
 <script src="/static/js/owl.js"></script>
 <script src="/static/js/script.js"></script>
+
 </body>
 </html>

@@ -32,6 +32,7 @@ def servicios(request):
                 'edit_web' : Edit_pag.objects.all().first(),
                 'sliders' : Slider.objects.all(),
                 'productos': Producto.objects.all(),
+                'aplicaciones': Aplica_dosis_producto.objects.all(),
                 'beneficios':Beneficios_producto.objects.all(),
                 'blogs':Blog.objects.all(),
                 }
@@ -51,17 +52,18 @@ def productos(request):
     return render(request, 'shop-products.html', contexto)
 
 
-def producto_id(request,id):
+def producto_id(request,n):
     contexto = {
                 'biologicos': Marca.objects.all().first(),
                 'edit_web' : Edit_pag.objects.all().first(),
-                'sliders' : Slider.objects.all(),
+                'producto': Producto.objects.get(id=n),
                 'productos': Producto.objects.all(),
-                'beneficios':Beneficios_producto.objects.all(),
+                'aplicas': Aplica_dosis_producto.objects.filter(producto=n),
+                'beneficios':Beneficios_producto.objects.filter(producto=n),
                 'blogs':Blog.objects.all(),
                 }
 
-    return render(request, 'page-project-details.html', contexto)
+    return render(request, 'shop-product-details.html', contexto)
 
 def contacto(request):
     contexto = {
@@ -73,7 +75,7 @@ def contacto(request):
                 'blogs':Blog.objects.all(),
                 }
 
-    return render(request, 'index.html', contexto)
+    return render(request, 'page-contact.html', contexto)
 
 def blog(request):
     contexto = {

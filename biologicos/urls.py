@@ -26,6 +26,7 @@ urlpatterns = [
     path('empresa/', empresa),
     path('servicios/', servicios),
     path('productos/', productos),
+    path('producto/<int:n>/', producto_id),
     path('contacto/', contacto),
     path('blog/', blog),
     path('post/<int:n>/', post),
