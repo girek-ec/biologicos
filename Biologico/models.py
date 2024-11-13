@@ -37,7 +37,6 @@ class Edit_pag(models.Model):
     mision = models.TextField(max_length=900, null=True, blank=True)
     img_vision = models.FileField(upload_to='edit_web/', null=True, blank=True, help_text="fondo  1894x718")
     vision = models.TextField(max_length=900, null=True, blank=True)
-
     class Meta:
         verbose_name_plural = "0. Edición de Pág Web"
 
@@ -62,8 +61,6 @@ class Marca(models.Model):
     logo_cuadrado = models.ImageField(upload_to='empresa/', null=True, blank=True)
     logo_cuadrado_verde = models.ImageField(upload_to='empresa/', null=True, blank=True)
     logo_cuadrado_blanco = models.ImageField(upload_to='empresa/', null=True, blank=True)
-
-
 
     def vista_previa(self):
         return mark_safe('<image width="300" height="150"  src="/media/%s">' % self.logo)
