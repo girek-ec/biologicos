@@ -62,13 +62,8 @@
 					</div>
 					<div class="product-details__content">
 						<p class="product-details__content-text1">{{ producto.detalle }}</p>
-						<p class="product-details__content-text2">
-                            <br>
-							Producto disponible</p>
 					</div>
                     
-
-
 					<div class="product-details__buttons">
 						<div class="product-details__buttons-1">
 							<a href=" https://api.whatsapp.com/send?phone=+593{{ biologicos.whatsapp }}&text=Hola%20Me%20interesa%20este%20producto%20  https://www.biologicos.ec/producto/{{ producto.id }}  - {{ producto.titulo }}  " class="theme-btn btn-style-one"><span class="btn-title">Adquirir Producto</span></a>
@@ -77,15 +72,41 @@
 							<a href="/media/{{ producto.ficha_tecnica }}" class="theme-btn btn-style-one"><span class="btn-title">Ver Ficha Técnica</span></a>
 						</div>
 					</div>
+                    
+                    <!-- Features Section -->
+                    <section class="">
+                        <div class="a">
+                            <div class="row">
+                                <!-- Feature Block -->
+                                <div class="feature-block col-lg-6 col-md-6 col-sm-12 mb-sm-50">
+                                    <div class="inner"  style="padding-left: 0px !important;">
+                                        <a href="/media/{{ producto.certificacion }}" style="color: #797f7d !important;">
+                                             <p style="margin-bottom: 0px !important;"> Certificación </p>
+                                             <img src="/media/{{ producto.logo_certificacion }}"  alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Feature Block -->
+                                <div class="feature-block col-lg-6 col-md-6 col-sm-12 mb-sm-50">
+                                    <div class="inner"  style="padding-left: 0px !important;">
+                                        <a href="/media/{{ producto.registro }}" style="color: #797f7d !important;">
+                                             <p style="margin-bottom: 0px !important;"> Registro </p>
+                                             <img src="/media/{{ producto.logo_registro }}"  alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
 					<div class="product-details__social">
 						<div class="title">
-							<h3>Compartir con amigos</h3>
+							<h3> Compartir con amigos </h3>
 						</div>
 						<ul class="social-icon-one">
-							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="http://www.twitter.com/{{ biologicos.twitter }}"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="http://www.facebook.com/{{ biologicos.facebook }}"><i class="fab fa-facebook-f"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -93,7 +114,7 @@
 		</div>
 	</section>
 	<!--Product Details End-->
-
+ 
 	<!--Product Description Start-->
 	<section class="product-description">
 		<div class="container pt-0 pb-90">
@@ -109,8 +130,7 @@
 						<div class="tab active-tab" id="tab-1">
 							<div class="text">
 								<h3 class="product-description__title">Descripción</h3>
-								<p class="product-description__text1">{{ producto.detalle }}
-								</p>
+								<p class="product-description__text1">{{ producto.detalle }}</p>
 								<div class="">
 									<ul class="list-unstyled">
                                         {% for beneficio in beneficios %}
@@ -127,13 +147,9 @@
 						</div>
 						<div class="tab" id="tab-2">
                             <div class="text">
-								<h3 class="product-description__title">¿Cómo se utiliza?</h3>
-								<p class="product-description__text1">{{ producto.utilizacion }}</p>
+								<h3 class="product-description__title">¿Cómo se utiliza? </h3>
+								<p class="product-description__text1">{{ producto.utilizacion }} </p>
                                 <h3 class="product-description__title">Aplicación y Dosis</h3>
-								
-                                
-                                
-								
 							</div>
                         
                             <!-- About Section Two -->
@@ -170,6 +186,7 @@
 			</div>
 		</div>
 	</section>
+    
 	<!--Product Description End-->
 
 	<section class="related-product">
@@ -192,7 +209,7 @@
                                             <span class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
                                         </div>
                                         <div class="icon-box">
-                                            <a href="shop-cart.html" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+                                            <a href="/producto/{{ product.id }}" class="ui-btn add-to-cart"><i class="fa fa-shopping-cart"></i></a>
                                         </div>
                                     </div>
                                 </div>
