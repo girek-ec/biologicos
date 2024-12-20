@@ -8,6 +8,8 @@ def index(request):
                 'edit_web' : Edit_pag.objects.all().first(),
                 'sliders' : Slider.objects.all(),
                 'productos': Producto.objects.all(),
+                'servicios_menu': Servicio.objects.all(),
+                'servicios': Servicio.objects.all(),
                 'beneficios':Beneficios_producto.objects.all(),
                 'blogs':Blog.objects.all(),
                 }
@@ -20,6 +22,7 @@ def empresa(request):
                 'edit_web' : Edit_pag.objects.all().first(),
                 'sliders' : Slider.objects.all(),
                 'productos': Producto.objects.all(),
+                'servicios_menu': Servicio.objects.all(),
                 'beneficios':Beneficios_producto.objects.all(),
                 'blogs':Blog.objects.all(),
                 }
@@ -29,19 +32,35 @@ def empresa(request):
 def servicios(request):
     contexto = {
                 'biologicos': Marca.objects.all().first(),
+                'servicios_menu': Servicio.objects.all(),
                 'edit_web' : Edit_pag.objects.all().first(),
                 'sliders' : Slider.objects.all(),
                 'productos': Producto.objects.all(),
+                'servicios': Servicio.objects.all(),
                 'aplicaciones': Aplica_dosis_producto.objects.all(),
                 'beneficios':Beneficios_producto.objects.all(),
                 'blogs':Blog.objects.all(),
                 }
 
-    return render(request, 'index.html', contexto)
+    return render(request, 'shop-servicios.html', contexto)
+
+
+def servicios_id(request,n):
+    contexto = {
+                'biologicos': Marca.objects.all().first(),
+                'edit_web' : Edit_pag.objects.all().first(),
+                'productos': Producto.objects.all(),
+                'servicios_menu': Servicio.objects.all(),
+                'servicios': Servicio.objects.get(id=n),
+                'blogs':Blog.objects.all(),
+                }
+
+    return render(request, 'page-service-details.html', contexto)
 
 def productos(request):
     contexto = {
                 'biologicos': Marca.objects.all().first(),
+                'servicios_menu': Servicio.objects.all(),
                 'edit_web' : Edit_pag.objects.all().first(),
                 'sliders' : Slider.objects.all(),
                 'productos': Producto.objects.all(),
@@ -52,9 +71,12 @@ def productos(request):
     return render(request, 'shop-products.html', contexto)
 
 
+
+
 def producto_id(request,n):
     contexto = {
                 'biologicos': Marca.objects.all().first(),
+                'servicios_menu': Servicio.objects.all(),
                 'edit_web' : Edit_pag.objects.all().first(),
                 'producto': Producto.objects.get(id=n),
                 'productos': Producto.objects.all(),
@@ -71,6 +93,7 @@ def contacto(request):
                 'edit_web' : Edit_pag.objects.all().first(),
                 'sliders' : Slider.objects.all(),
                 'productos': Producto.objects.all(),
+                'servicios_menu': Servicio.objects.all(),
                 'beneficios':Beneficios_producto.objects.all(),
                 'blogs':Blog.objects.all(),
                 }
@@ -82,6 +105,7 @@ def blog(request):
                 'biologicos': Marca.objects.all().first(),
                 'edit_web' : Edit_pag.objects.all().first(),
                 'sliders' : Slider.objects.all(),
+                'servicios_menu': Servicio.objects.all(),
                 'productos': Producto.objects.all(),
                 'beneficios':Beneficios_producto.objects.all(),
                 'blogs':Blog.objects.all(),
@@ -94,6 +118,7 @@ def post(request,n):
                 'biologicos': Marca.objects.all().first(),
                 'edit_web' : Edit_pag.objects.all().first(),
                 'sliders' : Slider.objects.all(),
+                'servicios_menu': Servicio.objects.all(),
                 'productos': Producto.objects.all(),
                 'beneficios':Beneficios_producto.objects.all(),
                 'blogs':Blog.objects.get(id=n),

@@ -23,9 +23,11 @@
 <!--[if lt IE 9]><script src="/static/js/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="/static/js/respond.js"></script><![endif]-->
 </head>
-
 <body>
 <div class="page-wrapper">
+
+
+
 
 	<!-- Main Header-->	
 	<header class="main-header header-style-one">
@@ -61,25 +63,35 @@
 				<!-- Main box -->
 				<div class="main-box">
 					<div class="logo"><a href="/"><img src="/media/{{ biologicos.logo_horiz_color}}" alt="" title="Biológicos"></a></div>
-					<!--Nav Box-->
+                
+                    <!--Nav Box-->
 					<div class="nav-outer">
+                    
 						<nav class="nav main-menu">
 							<ul class="navigation">
                                 <li><a href="/"></a></li>
 								<li><a href="/">Inicio</a></li>
 								<li><a href="/empresa/">Nosotros</a></li>
-								<li class="current dropdown"><a href="/productos/" style="color: #7F858B !important;">Productos</a>
+								<li class="dropdown"><a href="/productos/" style="color: #7F858B !important;">Productos</a>
 									<ul>
                                         {% for producto in productos %}
 										<li><a href="/producto/{{ producto.id }}">{{ producto.titulo }}</a></li>
                                         {% endfor %}
 									</ul>
-								</li>	                            
-								<li><a href="/contacto/">Contacto</a></li>
+								</li>
+                                <li class="dropdown"><a href="/servicios/" style="color: #7F858B !important;">Servicios</a>
+                                        <ul>
+                                            {% for servicio in servicios_menu %}
+                                            <li><a href="/servicios/{{ servicio.id }}">{{ servicio.titulo }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+								</li>
                                 <li><a href="/blog/">Blog</a></li>
+                                <li><a href="/contacto/">Contacto</a></li>
 							</ul>
 						</nav>
 						<!-- Main Menu End-->
+                    
 						<div class="outer-box">
 							<a href="https://api.whatsapp.com/send?phone=+593{{ biologicos.whatsapp }}&text=Hola%20Biológicos%20Alvarado%20%26%20Maggio" class="theme-btn btn-style-one shop-now"><span class="btn-title">Chat WhatsApp</span></a>
 							<!--Mobile Navigation Toggler-->
@@ -167,11 +179,13 @@
 		<div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_one_wrapper" data-source="gallery">
 			<div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
 				<ul>
-					<!-- Slide 1 -->
-					<li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    
+                    {% for slider in sliders %}
+                    	<!-- Slide 1 -->
+					<li data-index="rs-{{ slider.orden }}" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 
 						<!-- MAIN IMAGE -->
-						<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/bg-1.jpg">
+						<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="/static/images/main-slider/bg-1.jpg">
 
 
 						<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme big-ipad-hidden rs-parallaxlevel-1"
@@ -189,7 +203,7 @@
 						data-x="['left','left','left','left']"
 						data-y="['middle','middle','middle','middle']"
 						data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure><img src="/static/images/main-slider/icon/object-1.png" alt=""></figure>
+							<figure><img src="/media/{{slider.img_izq_supe }}" alt=""></figure>
 						</div>
 
 						<div class="tp-caption tp-resizeme rs-parallaxlevel-2 ipad-hidden"
@@ -207,7 +221,7 @@
 						data-x="['right','right','right','right']"
 						data-y="['middle','middle','middle','middle']"
 						data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure><img src="/static/images/main-slider/icon/object-2.png" alt=""></figure>
+							<figure><img src="/media/{{slider.img_der_inf_der }}" alt=""></figure>
 						</div>
 
 
@@ -280,7 +294,7 @@
 						data-x="['center','center','center','center']"
 						data-y="['middle','middle','middle','middle']"
 						data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure><img src="/static/images/main-slider/icon/object-6.png" alt=""></figure>
+							<figure><img src="/media/{{slider.img_der_inf_izq_1 }}" alt=""></figure>
 						</div>
 
 						<div class="tp-caption tp-resizeme rs-parallaxlevel-3 ipad-hidden"
@@ -298,7 +312,7 @@
 						data-x="['right','right','right','right']"
 						data-y="['middle','middle','middle','middle']"
 						data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure class="main-image"><img src="https://via.placeholder.com/659x617" alt=""></figure>
+							<figure class="main-image"><img src="/media/{{ slider.imagen }}" alt=""></figure>
 						</div>
 
 						<div class="tp-caption"
@@ -317,7 +331,7 @@
 						data-y="['middle','middle','middle','middle']"
 						data-textalign="['top','top','top','top']"
 						data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-							<span class="title">Only Organic Products</span>
+							<span class="title">{{ slider.titulo }}</span>
 						</div>
 
 						<div class="tp-caption"
@@ -336,7 +350,7 @@
 						data-y="['middle','middle','middle','middle']"
 						data-textalign="['top','top','top','top']"
 						data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-							<h2>Healthy <br>Organic Food</h2>
+							<h2>{{ slider.sub_titulo }}</h2>
 						</div>
 
 						<div class="tp-caption"
@@ -355,203 +369,15 @@
 						data-y="['middle','middle','middle','middle']"
 						data-textalign="['top','top','top','top']"
 						data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-							<a href="#" class="theme-btn btn-style-one"><span class="btn-title">Discover more</span></a>
+							<a href="/productos/" class="theme-btn btn-style-one"><span class="btn-title">Ver Productos</span></a>
 						</div>
 					</li>
 
 
-					<!-- Slide 2 -->
-					<li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-
-						<!-- MAIN IMAGE -->
-						<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/bg-1.jpg">
-
-
-						<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme big-ipad-hidden rs-parallaxlevel-1"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[0,0,0,0]"
-						data-paddingright="[0,0,0,0]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="shape"
-						data-height="auto"
-						data-whitespace="nowrap"
-						data-width="none"
-						data-hoffset="['-190','-100','-100','-100']"
-						data-voffset="['-190','-190','-190','-190']"
-						data-x="['left','left','left','left']"
-						data-y="['middle','middle','middle','middle']"
-						data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure><img src="/static/images/main-slider/icon/object-1.png" alt=""></figure>
-						</div>
-
-						<div class="tp-caption tp-resizeme rs-parallaxlevel-2 ipad-hidden"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[0,0,0,0]"
-						data-paddingright="[0,0,0,0]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="shape"
-						data-height="none"
-						data-whitespace="nowrap"
-						data-width="none"
-						data-hoffset="['-120','-120','-120','-120']"
-						data-voffset="['100','100','100','100']"
-						data-x="['right','right','right','right']"
-						data-y="['middle','middle','middle','middle']"
-						data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure><img src="/static/images/main-slider/icon/object-2.png" alt=""></figure>
-						</div>
-
-
-						<div class="tp-caption tp-resizeme rs-parallaxlevel-3 ipad-hidden"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[0,0,0,0]"
-						data-paddingright="[0,0,0,0]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="shape"
-						data-height="none"
-						data-whitespace="nowrap"
-						data-width="none"
-						data-hoffset="['120','120','120','120']"
-						data-voffset="['180','180','180','180']"
-						data-x="['center','center','center','center']"
-						data-y="['middle','middle','middle','middle']"
-						data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure><img src="/static/images/main-slider/icon/object-3.png" alt=""></figure>
-						</div>
-
-						<div class="tp-caption tp-resizeme rs-parallaxlevel-1 ipad-hidden"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[0,0,0,0]"
-						data-paddingright="[0,0,0,0]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="shape"
-						data-height="none"
-						data-whitespace="nowrap"
-						data-width="none"
-						data-hoffset="['120','120','120','120']"
-						data-voffset="['100','100','100','100']"
-						data-x="['center','center','center','center']"
-						data-y="['top','top','top','top']"
-						data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure><img src="/static/images/main-slider/icon/object-4.png" alt=""></figure>
-						</div>
-
-						<div class="tp-caption tp-resizeme rs-parallaxlevel-2 ipad-hidden"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[0,0,0,0]"
-						data-paddingright="[0,0,0,0]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="shape"
-						data-height="none"
-						data-whitespace="nowrap"
-						data-width="none"
-						data-hoffset="['-30','-30','-30','-30']"
-						data-voffset="['-180','-180','-180','-180']"
-						data-x="['right','right','right','right']"
-						data-y="['center','bottom','bottom','bottom']"
-						data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure><img src="/static/images/main-slider/icon/object-5.png" alt=""></figure>
-						</div>
-
-						<div class="tp-caption tp-resizeme rs-parallaxlevel-3 ipad-hidden"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[0,0,0,0]"
-						data-paddingright="[0,0,0,0]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="shape"
-						data-height="none"
-						data-whitespace="nowrap"
-						data-width="none"
-						data-hoffset="['-50','-50','0','150']"
-						data-voffset="['120','120','120','120']"
-						data-x="['center','center','center','center']"
-						data-y="['middle','middle','middle','middle']"
-						data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure><img src="/static/images/main-slider/icon/object-6.png" alt=""></figure>
-						</div>
-
-						<div class="tp-caption tp-resizeme rs-parallaxlevel-3 ipad-hidden"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[0,0,0,0]"
-						data-paddingright="[0,0,0,0]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="shape"
-						data-height="none"
-						data-whitespace="nowrap"
-						data-width="none"
-						data-hoffset="['-30','-30','-30','-30']"
-						data-voffset="['-30','-30','-30','-30']"
-						data-x="['right','right','right','right']"
-						data-y="['middle','middle','middle','middle']"
-						data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-							<figure class="main-image"><img src="https://via.placeholder.com/583x550" alt=""></figure>
-						</div>
-
-						<div class="tp-caption"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[15,15,15,15]"
-						data-paddingright="[0,0,0,0]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="text"
-						data-height="none"
-						data-width="['750','750','750','650']"
-						data-whitespace="normal"
-						data-hoffset="['0','0','0','0']"
-						data-voffset="['-160','-160','-130','-120']"
-						data-x="['left','left','left','left']"
-						data-y="['middle','middle','middle','middle']"
-						data-textalign="['top','top','top','top']"
-						data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-							<span class="title">Only Organic Products</span>
-						</div>
-
-						<div class="tp-caption"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[15,15,15,15]"
-						data-paddingright="[15,15,15,15]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="text"
-						data-height="none"
-						data-width="['750','750','750','650']"
-						data-whitespace="normal"
-						data-hoffset="['0','0','0','0']"
-						data-voffset="['-40','-40','-40','-30']"
-						data-x="['left','left','left','left']"
-						data-y="['middle','middle','middle','middle']"
-						data-textalign="['top','top','top','top']"
-						data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-							<h2>Healthy <br>Organic Food</h2>
-						</div>
-
-						<div class="tp-caption"
-						data-paddingbottom="[0,0,0,0]"
-						data-paddingleft="[15,15,15,15]"
-						data-paddingright="[15,15,15,15]"
-						data-paddingtop="[0,0,0,0]"
-						data-responsive_offset="on"
-						data-type="text"
-						data-height="none"
-						data-width="['700','750','700','450']"
-						data-whitespace="normal"
-						data-hoffset="['0','0','0','0']"
-						data-voffset="['120','120','90','100']"
-						data-x="['left','left','left','left']"
-						data-y="['middle','middle','middle','middle']"
-						data-textalign="['top','top','top','top']"
-						data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-							<a href="#" class="theme-btn btn-style-one"><span class="btn-title">Discover more</span></a>
-						</div>
-					</li>
-				</ul>
+                    {% endfor %}
+                    
+					
+                </ul>
 			</div>
 		</div>
 	</section>
@@ -681,15 +507,7 @@
 		</section>
 		<!-- End Testimonial Section Two -->
 	{% endfor %}
-
-
-
-	
         
-      
-        
-        
-	 
 	
 	<!-- Features Section -->
 	<section class="features-section" style="background-image: url(' /media/{{ edit_web.imag_fondo_03 }}' ) !important;" >
@@ -757,7 +575,7 @@
                             </div>
                             <div class="text" > {{ blog.detalle|truncatewords:30  }} </div>
                             <a href="/post/{{ blog.id }}">
-                                <span class="name" > Leer.</span>
+                                <span class="leer" > Leer.</span>
                             </a>
                         </div>
                     </div>
@@ -809,10 +627,12 @@
 						<div class="footer-widget">
 							<h5 class="widget-title">Explorar</h5>
 							<ul class="user-links">
-								<li><a href="/empresa/">Empresa</a></li>
+                                <li><a href="/">Inicio</a></li>
+								<li><a href="/empresa/">Nosotros</a></li>
 								<li><a href="/productos/">Productos</a></li>
-								<li><a href="/contacto/">Contacto</a></li>
+                                <li><a href="/servicios/">Servicios</a></li>
 								<li><a href="/blog/">Blog</a></li>
+                                <li><a href="/contacto/">Contacto</a></li>
 							</ul>
 						</div>
 					</div>
@@ -886,40 +706,40 @@
 <!-- End Page Wrapper -->
 
 
+
+
+{% block script %}
+
 <!-- Scroll To Top -->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
-
-
-<script src="/static/js/jquery.js"></script>
-<script src="/static/js/popper.min.js"></script>
-
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
 <!--Revolution Slider-->
-<script src="/static/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="/static/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="/static/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="/static/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="/static/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="/static/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="/static/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="/static/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="/static/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="/static/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="/static/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script src="/static/js/main-slider-script.js"></script>
+<script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="js/main-slider-script.js"></script>
 <!--Revolution Slider-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery.countdown.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/script.js"></script>
 
 
-<script src="/static/js/jquery.js"></script>
-<script src="/static/js/popper.min.js"></script>
-<script src="/static/js/bootstrap.min.js"></script>
-<script src="/static/js/jquery.fancybox.js"></script>
-<script src="/static/js/jquery.countdown.js"></script>
-<script src="/static/js/bxslider.js"></script>
-<script src="/static/js/mixitup.js"></script>
-<script src="/static/js/wow.js"></script>
-<script src="/static/js/appear.js"></script>
-<script src="/static/js/owl.js"></script>
-<script src="/static/js/script.js"></script>
+{% endblock %}
+
+
 
 </body>
 </html>

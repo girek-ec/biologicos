@@ -38,6 +38,12 @@ class ProductoAdmin(admin.ModelAdmin):
     inlines = [Beneficios_productoInline,Aplica_dosis_productoInline ]
 
 
+@admin.register(Servicio)
+class ServicioAdmin(admin.ModelAdmin):
+    list_display = Attr(Servicio) + ["vista_previa"]
+    list_display_links = Attr(Servicio)
+
+
 @admin.register(Beneficios_producto)
 class Beneficios_productoAdmin(admin.ModelAdmin):
     list_display = Attr(Beneficios_producto) 

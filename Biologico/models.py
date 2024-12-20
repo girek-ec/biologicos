@@ -60,6 +60,7 @@ class Marca(models.Model):
     logo_cuadrado_verde = models.ImageField(upload_to='empresa/', null=True, blank=True)
     logo_cuadrado_blanco = models.ImageField(upload_to='empresa/', null=True, blank=True)
 
+
     def vista_previa(self):
         return mark_safe('<image width="300" height="150"  src="/media/%s">' % self.logo)
 
@@ -68,6 +69,7 @@ class Marca(models.Model):
 
 
 class Slider(models.Model):
+    orden = models.DecimalField(max_digits=2, decimal_places=0, default=0.00)
     titulo = models.CharField(max_length=90, null=True, blank=True)
     sub_titulo = models.CharField(max_length=90, null=True, blank=True)
     detalle = models.TextField(max_length=400, null=True, blank=True)
@@ -83,7 +85,7 @@ class Slider(models.Model):
 
 
     def vista_previa(self):
-        return mark_safe('<image width="300" height="150"  src="/media/%s">' % self.imagen)
+        return mark_safe('<image width="200" height="200"  src="/media/%s">' % self.imagen)
 
     class Meta:
         verbose_name_plural = "2. Slider "
@@ -127,6 +129,36 @@ class Producto(models.Model):
 
     class Meta:
         verbose_name_plural = "3. Producto "
+
+
+
+class Servicio(models.Model):
+    titulo = models.CharField(max_length=90, null=True, blank=True)
+    sub_titulo_1 = models.CharField(max_length=90, null=True, blank=True)
+    sub_titulo_2 = models.CharField(max_length=90, null=True, blank=True)
+    parrafo_1 = models.TextField(max_length=1000, null=True, blank=True)
+    parrafo_2 = models.TextField(max_length=1000, null=True, blank=True)
+    beneficio_parrafo_1 = models.TextField(max_length=1000, null=True, blank=True)
+    beneficio_1 = models.CharField(max_length=90, null=True, blank=True)
+    beneficio_2 = models.CharField(max_length=90, null=True, blank=True)
+    beneficio_3 = models.CharField(max_length=90, null=True, blank=True)
+    beneficio_4 = models.CharField(max_length=90, null=True, blank=True)
+    beneficio_5 = models.CharField(max_length=90, null=True, blank=True)
+    beneficio_6 = models.CharField(max_length=90, null=True, blank=True)
+    img_servicio_1 = models.FileField(upload_to='servicio/', null=True, blank=True, help_text="imagen servicio")
+    img_servicio_2 = models.FileField(upload_to='servicio/', null=True, blank=True, help_text="imagen servicio")
+    link_video_servicio = models.CharField(max_length=200, null=True, blank=True, help_text="Link youtube")
+    color = models.CharField(max_length=90, null=True, blank=True)
+
+
+    def __str__(self):
+        return ' %s ' % (self.titulo)
+
+    def vista_previa(self):
+        return mark_safe('<image width="100" height="250"  src="/media/%s">' % self.img_servicio_1)
+
+    class Meta:
+        verbose_name_plural = "4. Servicios "
 
 class Aplica_dosis_producto(models.Model):
     producto = models.ForeignKey(Producto, on_delete=models.CASCADE, null=True, blank=True)

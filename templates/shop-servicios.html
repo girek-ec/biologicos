@@ -12,26 +12,27 @@
     <!-- Featured Products -->
 
     
-       <!-- Top Banners -->
+
+    <!-- Top Banners -->
 	<section class="top-banners">
 		<div class="container-fluid pb-0">
 			
 
 			<div class="row">
 				<div class="sec-title text-center">
-					<span class="sub-title">Productos para el Agro</span>
+					<span class="sub-title">Servicios para el Agro</span>
 					<h2>Calidad Orgánica</h2>
 				</div>
-				{% for producto in productos %}
+				{% for servicio in servicios %}
 				<!-- Banner Box One -->
-				<div class="banner-box-one  col-lg-3 col-md-6 col-sm-12" >
-					<div class="inner-box" style="background-color: {{producto.color}}">
-						<div class="image"><img src="/media/{{producto.img_foto}}" alt=""></div>
+				<div class="banner-box-one  col-lg-4 col-md-6 col-sm-12"  >
+					<div class="inner-box" style="background-color: {{servicio.color}}; left: 0px !important;">
+						<div class="image"  style="left: 0px !important;"><img src="/media/{{servicio.img_servicio_2}}" alt=""></div>
 						<div class="content">
-							<span class="title">{{producto.sub_titulo}}</span>
-                            <img src="/media/{{producto.logo_producto}}" alt="">
-							<h3>{{producto.titulo}}</h3>
-							<a href="/producto/{{producto.id}}" class="theme-btn btn-style-two"><span class="btn-title">Ver.</span></a>
+							<span class="title">{{servicio.sub_titulo}}</span>
+							<h3 style="font-size: 27px !important;">{{servicio.titulo}}</h3>
+                            <br><br><br><br><br><br><br><br>
+							<a href="/servicios/{{servicio.id}}" class="theme-btn btn-style-two"><span class="btn-title">Ver.</span></a>
 						</div>
 					</div>
 				</div>
@@ -40,6 +41,4 @@
 
 		</div>
 	</section>
- 
-    <!-- End Featured Products -->
 {% endblock %}
