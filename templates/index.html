@@ -569,13 +569,15 @@
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="info-box">
-                                <div class="thumb"><img src="/media/{{ blog.imagen }}" alt=""></div>
+                                <div class="thumb" style="top: -30px !important;"><img src="/media/{{ blog.imagen }}" alt=""></div>
                                 <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                                 <h6 class="name">{{ blog.titulo }}</h6>
                             </div>
-                            <div class="text" > {{ blog.detalle|truncatewords:30  }} </div>
                             <a href="/post/{{ blog.id }}">
-                                <span class="leer" > Leer.</span>
+                                <div class="text" > {{ blog.detalle|truncatewords:30  }} </div> 
+                            </a>
+                            <a href="/post/{{ blog.id }}">
+                                <span class="leer"  style="font-size: x-large"> Leer.</span>
                             </a>
                         </div>
                     </div>
@@ -712,29 +714,29 @@
 
 <!-- Scroll To Top -->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
-<script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/popper.min.js"></script>
 <!--Revolution Slider-->
-<script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script src="js/main-slider-script.js"></script>
+<script src="/static/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/static/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/static/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/static/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/static/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/static/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/static/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="/static/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/static/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/static/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/static/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="/static/js/main-slider-script.js"></script>
 <!--Revolution Slider-->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/jquery.countdown.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/script.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery.fancybox.js"></script>
+<script src="/static/js/jquery.countdown.js"></script>
+<script src="/static/js/wow.js"></script>
+<script src="/static/js/appear.js"></script>
+<script src="/static/js/owl.js"></script>
+<script src="/static/js/script.js"></script>
 
 
 {% endblock %}
